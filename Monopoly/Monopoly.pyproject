@@ -1,6 +1,10 @@
 {
     "files": [
+        "board.py",
+        "cards.py",
+        "constants.py",
         "main.py",
-        "main.qml"
+        "main.qml",
+        "player.py"
     ]
 }
