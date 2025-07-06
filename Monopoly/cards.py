@@ -1,4 +1,6 @@
-# This Python file uses the following encoding: utf-8
+from PySide6.QtWidgets import QMessageBox
 
-# if __name__ == "__main__":
-#     pass
+class ChanceCard:
+    @staticmethod
+    def draw_card():
+        QMessageBox.information(None, "Шанс", "Пройдите на Старт! Получите $200!")
