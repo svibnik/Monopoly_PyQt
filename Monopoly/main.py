@@ -92,7 +92,6 @@ class PropertyWidget(QWidget):
         self.player1.setGeometry(16, 24, 12, 12)
         self.player1.setStyleSheet("""
             background-color: red; 
-            border-radius: 7px;
             border: 1px solid white;
         """)
         self.player1.hide()
@@ -101,7 +100,6 @@ class PropertyWidget(QWidget):
         self.player2.setGeometry(32, 24, 12, 12)
         self.player2.setStyleSheet("""
             background-color: blue; 
-            border-radius: 7px;
             border: 1px solid white;
         """)
         self.player2.hide()
@@ -402,10 +400,9 @@ class MainWindow(QMainWindow):
         self.dice1.update()
         self.dice2.update()
 
-        #QTimer.singleShot(500, lambda: self.move_player(mc.cur_player, total, Free))
         self.move_player(mc.cur_player, total)
-        # self.last_player = 'p' + str(int(self.last_player[1]) + 1)
-        if self.last_player != 'p1':                                       # зменил 'p1'  на  'p2'
+
+        if self.last_player != 'p1':
             self.last_player = 'p1'
             mf.change_last_player('p1')
         else:
@@ -501,13 +498,6 @@ class MainWindow(QMainWindow):
         self.prop_enlarge.hide()
 
     def change_turn(self):
-
-        # if mc.cur_player in p_in_j:
-        #     p_in_j[mc.cur_player] += 1
-        #     self.jail_checks(False)
-
-        # MonopolyConstants.change_cur_player()
-
         mc.change_cur_player()
 
         self.turn_label.setText(f"Player {mc.cur_player[1]}'s turn")
