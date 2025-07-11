@@ -16,7 +16,7 @@ from MonopolyFunctions import *
 class PropertyWidget(QWidget):
     def __init__(self, name, parent=None):
         super().__init__(parent)
-        self.name = name                       # Вводим имя поля
+        self.name = name
         self.info = info[name]                 # Получаем данные по клетки из славаря
         self.initUI()
 
@@ -140,7 +140,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Monopoly")
-        self.setFixedSize(960, 640)  # Увеличена ширина окна            # Настроить изменяющ размер если время
+        self.setFixedSize(960, 640)  # Увеличена ширина окна         # Настроить изменяющ размер если время
 
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
